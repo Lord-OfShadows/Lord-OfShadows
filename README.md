@@ -1,7 +1,7 @@
 <h1 align="center">Hey, I'm Arjun 👋</h1>
 
 <p align="center">
-  <b>Final-year CS student · Open-source developer · Building systems that survive failure</b>
+  <b>Final-year CS student · Building systems that survive failure</b>
 </p>
 
 <p align="center">
@@ -16,7 +16,6 @@
 
 I'm a B.E. Computer Science and Engineering student at **Thapar Institute of Engineering and Technology, Patiala** (graduating 2027). I like understanding how things work under the hood, and then building my own version to prove it.
 
-- 🌍 Open Source Software Developer at **FOSSASIA (Visdom)** since March 2026
 - 🛡️ Former Joint Secretary of the **OWASP Student Chapter at TIET** (Sept 2024 – May 2026)
 - 🎯 Looking for **fresher SDE roles** (Gurgaon / Bangalore), especially backend and distributed systems
 - 📚 Currently going deep on compiler design
@@ -84,7 +83,6 @@ A **Google File System-inspired distributed file system** written in Go. I learn
 ## 🎯 What I'm working toward
 
 - Landing a backend / systems SDE role where I can work on problems around reliability and scale
-- Contributing more to open source through FOSSASIA
 - Building an ML project that has real impact, not just a notebook
 - Turning every project into a "found it, fixed it, measured it" story
 
@@ -92,7 +90,7 @@ A **Google File System-inspired distributed file system** written in Go. I learn
 
 ## 🎮 Outside of code
 
-Reading, football, and a lot of Bloodborne and Fortnite.
+I enjoy reading and playing football.
 
 ---
 
