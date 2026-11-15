@@ -1,99 +1,74 @@
-<h1 align="center">Hey, I'm Arjun 👋</h1>
+<h1 align="center">
+  <a href="https://github.com/Lord-OfShadows/gfs">
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=3000&pause=1000&color=2F81F7&center=true&vCenter=true&width=700&lines=Distributed+Systems;Backend+Engineering;Go+%7C+C%2B%2B+%7C+Python" alt="Distributed Systems | Backend Engineering | Go | C++ | Python">
+  </a>
+</h1>
 
 <p align="center">
-  <b>Final-year CS student · Building systems that survive failure</b>
-</p>
-
-<p align="center">
-  <a href="https://www.linkedin.com/in/arjunangirus"><img src="https://img.shields.io/badge/LinkedIn-arjunangirus-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="https://github.com/Lord-OfShadows"><img src="https://img.shields.io/badge/GitHub-Lord--OfShadows-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
-  <a href="https://codeforces.com/profile/EarnTHYPart"><img src="https://img.shields.io/badge/Codeforces-EarnTHYPart-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white" alt="Codeforces"></a>
+  <a href="https://www.linkedin.com/in/arjunangirus"><img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://codeforces.com/profile/EarnTHYPart"><img src="https://img.shields.io/badge/CODEFORCES-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white" alt="Codeforces"></a>
+  <img src="https://komarev.com/ghpvc/?username=Lord-OfShadows&label=PROFILE+VIEWS&style=for-the-badge&color=8A2BE2" alt="Profile views">
 </p>
 
 ---
 
-## 🧑‍💻 About me
+## Hey, I'm Arjun
 
-I'm a B.E. Computer Science and Engineering student at **Thapar Institute of Engineering and Technology, Patiala** (graduating 2027). I like understanding how things work under the hood, and then building my own version to prove it.
+I build **distributed systems that detect failure, heal themselves, and prove it with benchmarks**. Final-year CS student at Thapar Institute, currently looking for fresher SDE roles.
 
-- 🛡️ Former Joint Secretary of the **OWASP Student Chapter at TIET** (Sept 2024 – May 2026)
-- 🎯 Looking for **fresher SDE roles** (Gurgaon / Bangalore), especially backend and distributed systems
-- 📚 Currently going deep on compiler design
+```yaml
+name: Arjun Angirus
+education: B.E. Computer Science and Engineering, Thapar Institute (2023 - 2027)
+looking_for: Fresher SDE roles (Gurgaon / Bangalore)
+
+focus:
+  - Distributed Systems & Fault Tolerance
+  - Backend Engineering
+  - Applied ML (LoRA fine-tuning)
+
+stack:
+  languages:
+    - C++ / Go / Python / TypeScript
+  systems:
+    - gRPC / Protobuf / Docker Compose
+  ml:
+    - CNN / RNN / LSTM / GRU
+    - LoRA / HuBERT / Whisper
+```
 
 ---
 
-## 🚀 Featured project: [GFS](https://github.com/Lord-OfShadows/gfs)
+## 🚀 Featured: [GFS](https://github.com/Lord-OfShadows/gfs)
 
-A **Google File System-inspired distributed file system** written in Go. I learned Go while building it.
+A Google File System-inspired distributed file system in Go. One coordinator holds metadata, four chunkservers store 4 MiB chunks replicated 3x, and every chunk is SHA-256 verified. Heartbeats detect dead nodes and repair kicks in automatically.
 
-**Architecture:** one coordinator for metadata, four chunkservers for data, a Go CLI client, gRPC + Protobuf, and Docker Compose to run it all.
-
-| What it does | How |
+| Stop a chunkserver mid-run (20 runs, one laptop) | Result |
 |---|---|
-| Splits files into **4 MiB chunks** | Each chunk is stored on **3 replicas** |
-| Replicates writes | Client → first replica → forwarding chain |
-| Guarantees integrity | **SHA-256** per chunk, verified end to end |
-| Detects failures | **1 s heartbeats**, nodes marked Suspect then Unavailable |
-| Heals itself | Automatic re-replication with a bounded worker pool |
-
-**Measured, not claimed** (one laptop, Docker Compose, 20 MB file, one chunkserver stopped, 20 runs):
-
-- ⏱️ Failure detected in **2.8 s** median
-- 🔧 Repair finished in **0.6 s** median
-- ✅ Back to 3 copies in **3.4 s** median, and **20/20 runs succeeded**
-- 📖 Reads keep working with **2 of 4 nodes down**
-- 🔁 **2.48 GB** round trip, byte-identical
-
-**Design principles I followed:**
-
-- Metadata plane kept separate from the data plane
-- Explicit state machines and typed errors instead of boolean flags
-- Timeouts mean *suspicion*, not certainty
-- Idempotent repair tasks, every RPC has a deadline
-- Never hold a lock during network or disk I/O
-
-**What I want to do next:** persist coordinator metadata across restarts, fix the read stall on a just-died replica, and pipeline writes instead of store-and-forward. The open issues are documented in the repo, including the known limitations.
+| Failure detected | **2.8 s** median |
+| Back to 3 copies | **3.4 s** median |
+| Runs that recovered | **20 / 20** |
+| Reads with 2 of 4 nodes down | **still work** |
 
 ---
 
-## 🤖 Machine learning
-
-- Studied and built with **CNN, RNN, LSTM, GRU**
-- Fine-tuned **Whisper with LoRA**
-- Built a **dysarthric speech** project using **HuBERT with LoRA** optimization
-- Exploring **RAG / GenAI** and multi-tenant LoRA adapter serving for what comes next
-
----
-
-## 🛠️ Tech stack
+## 🛠️ Tools & Tech
 
 <p>
-  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++">
-  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
-  <img src="https://img.shields.io/badge/gRPC-244C5A?style=for-the-badge&logo=grpc&logoColor=white" alt="gRPC">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch">
+  <img src="https://skillicons.dev/icons?i=cpp,go,py,ts,react,docker,git,github" alt="Tools and tech">
 </p>
 
 ---
 
-## 🎯 What I'm working toward
+## 🔭 What I'm up to
 
-- Landing a backend / systems SDE role where I can work on problems around reliability and scale
-- Building an ML project that has real impact, not just a notebook
-- Turning every project into a "found it, fixed it, measured it" story
-
----
-
-## 🎮 Outside of code
-
-I enjoy reading and playing football.
+- Hardening GFS: persistent metadata, fixing read stalls on a just-died replica, pipelined writes
+- Studying compiler design
+- Solving problems on Codeforces and preparing for SDE interviews
+- Exploring RAG / GenAI for my next ML project
+- Open to fresher backend and systems roles
 
 ---
 
 <p align="center">
-  <i>If you're hiring, building something interesting, or just want to talk systems, reach out on <a href="https://www.linkedin.com/in/arjunangirus">LinkedIn</a>.</i>
+  <i>Reach out on <a href="https://www.linkedin.com/in/arjunangirus">LinkedIn</a>. I enjoy reading and playing football.</i>
 </p>
