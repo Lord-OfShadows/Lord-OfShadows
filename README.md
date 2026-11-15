@@ -1,7 +1,5 @@
 <h1 align="center">
-  <a href="https://github.com/Lord-OfShadows/gfs">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=3000&pause=1000&color=2F81F7&center=true&vCenter=true&width=700&lines=Distributed+Systems;Backend+Engineering;Go+%7C+C%2B%2B+%7C+Python" alt="Distributed Systems | Backend Engineering | Go | C++ | Python">
-  </a>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=3000&pause=1000&color=8B949E&center=true&vCenter=true&width=760&lines=Building+distributed+systems+that+survive+failure;Fine-tuning+models+with+LoRA;Curious+about+RAG+and+GenAI;Writing+Go%2C+C%2B%2B+and+Python" alt="Building distributed systems that survive failure. Fine-tuning models with LoRA. Curious about RAG and GenAI. Writing Go, C++ and Python.">
 </h1>
 
 <p align="center">
@@ -12,9 +10,9 @@
 
 ---
 
-## Hey, I'm Arjun
+### Hey, I'm Arjun
 
-I build **distributed systems that detect failure, heal themselves, and prove it with benchmarks**. Final-year CS student at Thapar Institute, currently looking for fresher SDE roles.
+I'm a final-year CS student at Thapar Institute who likes distributed systems and backend engineering. I built a [GFS-style distributed file system in Go](https://github.com/Lord-OfShadows/gfs), and I'm looking for fresher SDE roles.
 
 ```yaml
 name: Arjun Angirus
@@ -38,20 +36,7 @@ stack:
 
 ---
 
-## 🚀 Featured: [GFS](https://github.com/Lord-OfShadows/gfs)
-
-A Google File System-inspired distributed file system in Go. One coordinator holds metadata, four chunkservers store 4 MiB chunks replicated 3x, and every chunk is SHA-256 verified. Heartbeats detect dead nodes and repair kicks in automatically.
-
-| Stop a chunkserver mid-run (20 runs, one laptop) | Result |
-|---|---|
-| Failure detected | **2.8 s** median |
-| Back to 3 copies | **3.4 s** median |
-| Runs that recovered | **20 / 20** |
-| Reads with 2 of 4 nodes down | **still work** |
-
----
-
-## 🛠️ Tools & Tech
+### Tools & Tech
 
 <p>
   <img src="https://skillicons.dev/icons?i=cpp,go,py,ts,react,docker,git,github" alt="Tools and tech">
@@ -59,7 +44,7 @@ A Google File System-inspired distributed file system in Go. One coordinator hol
 
 ---
 
-## 🔭 What I'm up to
+### What I'm up to
 
 - Hardening GFS: persistent metadata, fixing read stalls on a just-died replica, pipelined writes
 - Studying compiler design
@@ -70,5 +55,5 @@ A Google File System-inspired distributed file system in Go. One coordinator hol
 ---
 
 <p align="center">
-  <i>Reach out on <a href="https://www.linkedin.com/in/arjunangirus">LinkedIn</a>. I enjoy reading and playing football.</i>
+  <sub>Reach out on <a href="https://www.linkedin.com/in/arjunangirus">LinkedIn</a>. I enjoy reading and playing football.</sub>
 </p>
